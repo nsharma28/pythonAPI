@@ -25,3 +25,10 @@ class CityRouter:
                 return Response.data(DataService.getAnalytic(analyticsReqModel))
             except Exception as ex:
                 return Response.error(ex)
+            
+    @router.post("/getPropertyDetail",tags=["raw/data"])
+    async def getPropertyDetail(request:Request,getPropertyDetailModel:getPropertyDetailReq):
+            try:
+                return Response.data(DataService.getPropertyDetail(getPropertyDetailModel))
+            except Exception as ex:
+                return Response.error(ex)

@@ -13,7 +13,7 @@
         "provider": "postgresql"
       },
       "default": {
-        "connectionString": "localhost://postgres:admin@isgpostgres:5432",
+        "connectionString": "localhost://mlsuser:123@NjMpTs@mlsdb:5432",
         "provider": "postgresql"
       }
     },

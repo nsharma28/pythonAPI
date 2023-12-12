@@ -23,3 +23,7 @@ class DataService:
         sql = Sql('default')
         return sql.execute_list(getAnalyticsRes,sql_query.get_analytics_query, MyConvert.to_dict(analyticsReqModel))
     
+    def getPropertyDetail(getPropertyDetailModel:getPropertyDetailReq())->list[getPropertyDetailRes]:
+        sql = Sql('default')
+        return sql.execute_list(getPropertyDetailRes,sql_query.get_property_detail_query, MyConvert.to_dict(getPropertyDetailModel))
+    

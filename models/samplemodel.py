@@ -2,6 +2,12 @@ from typing import List
 from pydantic import BaseModel
 from fastapi_camelcase import CamelModel
 
+class getPropertyDetailReq(CamelModel,BaseModel):
+    p_bfcid:int = 0
+    
+class getPropertyDetailRes(CamelModel,BaseModel):
+    result:dict = None
+
 class getAnalyticsReq(CamelModel,BaseModel):
     p_city:str = None
     p_state:str = None

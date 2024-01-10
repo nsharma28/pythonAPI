@@ -1,0 +1,1 @@
+select * from dbt_source.fn_getstatuswisecount() as result;

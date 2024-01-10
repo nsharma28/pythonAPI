@@ -2,6 +2,20 @@ from typing import List
 from pydantic import BaseModel
 from fastapi_camelcase import CamelModel
 
+class getActivevsSoldReq(CamelModel,BaseModel):
+    city:str = None
+    state:str = None
+
+class getActivevsSoldRes(CamelModel,BaseModel):
+    count:int = 0
+    status:str = ''
+    year:int = 0
+    month:int = 0
+
+class getStatusWiseCountRes(CamelModel,BaseModel):
+    count:int = 0
+    status:str = ''
+
 class getPropertyDetailReq(CamelModel,BaseModel):
     p_bfcid:int = 0
     

@@ -1,1 +1,1 @@
-select * from dbt_source.fn_getstatuswisecount() as result;
+select * from recolorado.fn_getstatuswisecount() as result;

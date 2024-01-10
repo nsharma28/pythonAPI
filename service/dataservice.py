@@ -26,4 +26,12 @@ class DataService:
     def getPropertyDetail(getPropertyDetailModel:getPropertyDetailReq())->list[getPropertyDetailRes]:
         sql = Sql('default')
         return sql.execute_list(getPropertyDetailRes,sql_query.get_property_detail_query, MyConvert.to_dict(getPropertyDetailModel))
+
+    def getActivevsSoldDetail(getActivevsSoldModel:getActivevsSoldReq())->list[getActivevsSoldRes]:
+        sql = Sql('default')
+        return sql.execute_list(getActivevsSoldRes,sql_query.get_active_vs_sold_query, MyConvert.to_dict(getActivevsSoldModel))
+    
+    def getStatusWiseCountDetail()->list[getStatusWiseCountRes]:
+        sql = Sql('default')
+        return sql.execute_list(getStatusWiseCountRes,sql_query.get_status_wise_count_query)
     

@@ -32,3 +32,17 @@ class CityRouter:
                 return Response.data(DataService.getPropertyDetail(getPropertyDetailModel))
             except Exception as ex:
                 return Response.error(ex)
+
+@router.post("/getactivevssold", tags=["raw/data"])
+    async def getActivevsSold(request:Request,getActivevsSoldModel: getActivevsSoldReq):
+        try:
+            return Response.data(DataService.getActivevsSoldDetail(getActivevsSoldModel))
+        except Exception as ex:
+            return Response.error(ex)
+
+@router.post("/getstatuswisecount", tags=["raw/data"])
+async def getStatusWiseCount(request:Request):
+    try:
+        return Response.data(DataService.getStatusWiseCountDetail())
+    except Exception as ex:
+        return Response.error(ex)
